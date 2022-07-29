@@ -5,6 +5,7 @@ import nltk
 import networkx as nx
 import re
 import cosine_summarizer
+import extraction_summarization
 
 alphabets= "([A-Za-z])"
 prefixes = "(Mr|St|Mrs|Ms|Dr)[.]"
@@ -43,7 +44,7 @@ def summarize(file_path, cosine, textrank):
 
         ranked_sentences = sorted(((scores[i],s) for i,s in enumerate(sentences)), reverse=True)
 
-        for i in range(2):
+        for i in range(5):
             summary.append(" ".join(ranked_sentences[i][1]))
 
         summary_text = ' '
@@ -53,7 +54,9 @@ def summarize(file_path, cosine, textrank):
         click.echo(summary_text)
     
     if textrank:
-        click.echo('textrank')
+
+        click.echo("In Progress")
+
     pass
 
 
