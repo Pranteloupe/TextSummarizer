@@ -5,7 +5,7 @@ import nltk
 import networkx as nx
 import re
 import cosine_summarizer
-import extraction_summarization
+#import extraction_summarization
 
 alphabets= "([A-Za-z])"
 prefixes = "(Mr|St|Mrs|Ms|Dr)[.]"
